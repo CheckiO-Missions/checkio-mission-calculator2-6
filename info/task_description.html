@@ -13,7 +13,7 @@
     As an input, you get a sequence of keys pressed, and, as the result of that function, you should show what will be shown on the screen when the last key is pressed. Be attentive, it's not always the result of the expression. Actually, playing with the physical calculator or app will really helps you to catch edge cases.
 </p>
 <p>
-    The calculator has a very simple keyboard. In the sixth mission are added such buttons as capital "B" (backspace) - delete previous character and capital "C" (clean) - delete all output, including error.
+    The calculator has a very simple keyboard. In the sixth mission are added such buttons as capital "B" (backspace) - delete previous character and capital "C" (clean) - delete all output, including error. See preconditions below for additional information.
 </p>
 
 <!-- Explain input and output values -->
@@ -51,6 +51,7 @@
         <li><i>if the abs(result) is more than 99999 - "error" is shown as a result;</i></li>
         <li><i>for float, if the integer part of abs(result) is more then 9999 - "error" is shown as a result;</i></li>
         <li><i>for float, in case the total length of number is more than 5 digits, it should be rounded to 5 digits (1.23456 -> 1.235);</i></li>
-        <li><i>for float, beginning and trailing zeros should be removed (until the "." of possible): 0.1200 -> .12 ,  123.00 -> 123. . It should be done after the rounding: 1.000123 -> 1.</i></li>
+        <li><i>for float, beginning and trailing zeros should be removed (until the "." of possible): 0.1200 -> .12 ,  123.00 -> 123. . It should be done after the rounding: 1.000123 -> 1;</i></li>
+        <li><i>when after B's no signs remain and new digits are pressed - concatenate with the previous number: 12+B3 -> 123 .</i></li>
     </ul>
 </p>
