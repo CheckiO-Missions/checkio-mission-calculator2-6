@@ -21,15 +21,15 @@ TESTS = {
         },
         {
             "input": ["123BBBBBB"],
-            "answer": "",
+            "answer": "0",
         },
         {
             "input": ["C"],
-            "answer": "",
+            "answer": "0",
         },
         {
             "input": ["-++B"],
-            "answer": "",
+            "answer": "0",
         },
         # fifth
         {
