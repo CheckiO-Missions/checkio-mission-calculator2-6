@@ -59,8 +59,13 @@ TESTS = {
         # fourth
         {
             "input": ["0001.1000"],
+            "answer": "1.100",
+            "explanation": "remove beg. zeros, not concl. enter",
+        },
+        {
+            "input": ["0001.1000-"],
             "answer": "1.1",
-            "explanation": "remove beg. adn trail. zeros",
+            "explanation": "remove beg. zeros, concl. enter",
         },
         {
             "input": ["999.9999999+="],
@@ -69,8 +74,8 @@ TESTS = {
         },
         {
             "input": ["1.000123"],
-            "answer": "1.",
-            "explanation": "remove trail. zeros after round",
+            "answer": "1.000",
+            "explanation": "not concl. enter",
         },
         {
             "input": ["9999.9999999+="],
@@ -256,11 +261,11 @@ TESTS = {
         },
         {
             "input": ["-+++--+.12009"],
-            "answer": ".12",
+            "answer": ".1200",
         },
         {
             "input": ["999.999+========="],
-            "answer": "9999.",
+            "answer": "error",
         },
         # third
         {
