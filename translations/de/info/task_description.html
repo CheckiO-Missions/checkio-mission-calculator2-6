@@ -1,0 +1,59 @@
+<!-- Describe task in general -->
+
+<p style="float: left; margin: 10px;">
+    <a href="https://www.vecteezy.com/free-vector/calculator"><img title="example" src="{{MEDIA}}calc.png" alt="example" style="max-height: 200px"/></a> 
+</p>
+<p>
+    <i>Die ersten programmierbaren Tischrechner wurden in der Mitte der 1960er Jahre hergestellt. Dazu gehörten der Mathatronics Mathatron (1964) und der Olivetti Programma 101 (Ende 1965). Es handelte sich dabei um elektronische Festkörper-Tischrechner mit Druckfunktion, Fließkommaberechnung, algebraischer Eingabe, Programmierung und Speicherprogrammierung. Beide konnten vom Endbenutzer programmiert werden und ihre Ergebnisse ausdrucken. Der Programma 101 fand eine viel größere Verbreitung und hatte die zusätzliche Funktion, Programme über Magnetkarten offline zu speichern. <a href="https://en.wikipedia.org/wiki/Calculator" target="_blank">Find more on wikipedia page...</a></i>
+</p>
+<p>
+    In dieser Aufgabenserie werden Sie einen einfachen Taschenrechner bauen.
+</p>
+<p>
+    Als Eingabe erhalten Sie eine Folge von gedrückten Tasten, und als Ergebnis dieser Funktion sollten Sie angeben, was auf dem Bildschirm angezeigt wird, wenn die letzte Taste gedrückt wird. Seien Sie aufmerksam, es ist nicht immer das Ergebnis des Ausdrucks. Wenn Sie mit dem physischen Taschenrechner oder der App spielen, können Sie die Randfälle besser erkennen.
+</p>
+<p>
+    In der sechsten Mission wurden Schaltflächen wie das große "B" (Backspace) - Löschen des vorherigen Zeichens und das große "C" (Clean) - Löschen der gesamten Ausgabe, einschließlich Fehler, hinzugefügt.
+</p>
+<p>
+    <strong>Erwartetes Verhalten:</strong>
+    <ul>
+        <li><i>anfängliche Nullen sollten entfernt werden, Nur-Nullen-Zahlen - in eine einzelne Null umgewandelt werden;</i></li>
+        <li><i>von den +- Zeichen zwischen den Zahlen sollte das letzte genommen werden;</i></li>
+        <li><i>"==" bedeutet die Wiederholung der letzten Operation;</i></li>
+        <li><i>"+=" oder "-=" - addiert/subtrahiert die Zahl (oder das Ergebnis der Operation) vor der Kombination (verdoppelt die Zahl/subtrahiert sich);</i></li>
+        <li><i>der Rechner ignoriert die Ziffer, die Sie nach der 5 eingeben;</i></li>
+        <li><i>"-" für Zahlen &lt; 0 nimmt NICHT die Stelle der Ziffer ein;</i></li>
+        <li><i>wenn abs(Ergebnis) größer als 99999 ist - wird "Fehler" als Ergebnis angezeigt;</i></li>
+        <li><i>für Float, wenn der ganzzahlige Anteil von abs(Ergebnis) größer als 9999 ist - "Fehler" wird als Ergebnis angezeigt;</i></li>
+        <li><i>für float, wenn die Gesamtlänge der Zahl mehr als 5 Stellen beträgt, sollte sie auf 5 Stellen gerundet werden (1,23456 -&gt; 1,235);</i></li>
+        <li><i>bei Fließkommazahlen sollten die Anfangs- und Endnullen entfernt werden (wenn möglich bis zum "."): 0.1200 -&gt; .12 , 123.00 -&gt; 123. . Dies sollte nach der Rundung geschehen: 1.000123 -&gt; 1. . Das Entfernen der nachgestellten Nullen sollte erst erfolgen, nachdem die Eingabe einer Zahl abgeschlossen ist (Nicht-Ziffern-Zeichen gedrückt);</i></li>
+        <li><i>wenn nach den B's keine Zeichen mehr übrig sind und neue Ziffern gedrückt werden - verketten Sie mit der vorherigen Zahl: 12+B3 -&gt; 123 .</i></li>
+    </ul>
+</p>
+<!-- Explain input and output values -->
+<p>
+   <strong>Eingabe:</strong> Zeichenkette.
+</p>
+<p>
+   <strong>Ausgabe:</strong> String.
+</p>
+<p>
+    <strong>Beispiele:</strong>
+</p>
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+
+    <strong>Wie es verwendet wird:</strong>
+    <i>Taschenrechner sind weit verbreitet. Es ist interessant und nützlich, die Prinzipien ihrer Eingabe und Ausgabe zu verstehen.</i>
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Vorbedingung:</strong>
+    <i>Erlaubte Zeichen: Ziffern (0-9), Punkt (.), Zeichen +, -, =, *, /, //, %, ** und ihre Kombinationen (+=, +-, ==, %= usw.), Buchstaben "B" und "C". Die Ganzzahl darf nicht mehr als 5 Ziffern enthalten, float - 4.</i>
+</p>
