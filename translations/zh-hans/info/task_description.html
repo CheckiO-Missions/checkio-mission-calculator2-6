@@ -1,0 +1,59 @@
+<!-- Describe task in general -->
+
+<p style="float: left; margin: 10px;">
+    <a href="https://www.vecteezy.com/free-vector/calculator"><img title="example" src="{{MEDIA}}calc.png" alt="example" style="max-height: 200px"/></a> 
+</p>
+<p>
+    <i>第一款台式可编程计算器诞生于 20 世纪 60 年代中期。其中包括 Mathatronics Mathatron（1964 年）和 Olivetti Programma 101（1965 年末），它们都是固态、台式、打印、浮点、代数输入、可编程、存储程序的电子计算器。这两款计算器均可由最终用户编程并打印出结果。Programma 101 的销售范围更广，并增加了通过磁卡离线存储程序的功能。<a href="https://en.wikipedia.org/wiki/Calculator" target="_blank">Find more on wikipedia page...</a></i>
+</p>
+<p>
+    在本系列任务中，您将制作一个初级计算器。
+</p>
+<p>
+    作为输入，您需要按下一串按键，作为函数的结果，您需要显示按下最后一个键时屏幕上会显示什么。注意，这并不总是表达式的结果。实际上，使用实物计算器或应用程序确实有助于你捕捉边缘情况。
+</p>
+<p>
+    在第六个任务中，添加了大写字母 "B"（退格）和大写字母 "C"（清除）按钮，前者用于删除前一个字符，后者用于删除所有输出，包括错误信息。
+</p>
+<p>
+    <strong>预期行为：</strong>
+    <ul>
+        <li><i>开头的零应删除，只有零的数字 - 转换为单个零；</i></li>
+        <li><i>数字之间的 +- 符号应取最后一个；</i></li>
+        <li><i>"==" 表示重复上次操作；</i></li>
+        <li><i>"+="或"-="--在组合前对数字（或运算结果）进行加减运算（将数字加倍或减去本身）；</i></li>
+        <li><i>计算器忽略在第 5 位之后输入的数字；</i></li>
+        <li><i>数字 &lt; 0 的"-"不占位数；</i></li>
+        <li><i>如果 abs(结果)大于 99999，结果显示为 "错误"；</i></li>
+        <li><i>对于浮点数，如果 abs(结果) 的整数部分大于 9999，则结果显示为 "错误"；</i></li>
+        <li><i>对于 float，如果数字的总长度超过 5 位数，则应四舍五入到 5 位数（1.23456 -&gt; 1.235）；</i></li>
+        <li><i>对于浮点数，应去掉开头和尾部的零（如果可能，去掉". "之前的零）： 0.1200 -&gt; .12 , 123.00 -&gt; 123..应在四舍五入后进行： 1.000123 -&gt; 1. .只有在输入数字结束后（按下非数字字符），才能删除尾部的零；</i></li>
+        <li><i>当 B 字符后没有符号且按下新的数字时 - 与前一个数字连接：12+B3 -&gt; 123 .</i></li>
+    </ul>
+</p>
+<!-- Explain input and output values -->
+<p>
+   <strong>输入：</strong>字符串。
+</p>
+<p>
+   <strong>输出： 字符串</strong>字符串。
+</p>
+<p>
+    <strong>示例：字符串</strong>
+</p>
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+
+    <strong>如何使用</strong>
+    <i>计算器被广泛使用。了解其输入和输出的原理既有趣又有用。</i>
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>前提条件：</strong>
+    <i>允许使用的字符：数字（0-9）、点（.）、符号 +、-、=、*、/、//、%、** 及其组合（+=、+-、==、%= 等）、字母 "B "和 "C"。整数不得超过 5 位，浮点数不得超过 4 位。</i>
+</p>
