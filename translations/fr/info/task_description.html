@@ -1,0 +1,59 @@
+<!-- Describe task in general -->
+
+<p style="float: left; margin: 10px;">
+    <a href="https://www.vecteezy.com/free-vector/calculator"><img title="example" src="{{MEDIA}}calc.png" alt="example" style="max-height: 200px"/></a> 
+</p>
+<p>
+    <i>Les premières calculatrices programmables de bureau ont été produites au milieu des années 1960. Il s'agissait notamment de la Mathatronics Mathatron (1964) et de l'Olivetti Programma 101 (fin 1965) qui étaient des calculatrices électroniques à semi-conducteurs, de bureau, imprimantes, à virgule flottante, à entrée algébrique, programmables et à programme enregistré. Toutes deux pouvaient être programmées par l'utilisateur final et imprimer leurs résultats. La Programma 101 a été beaucoup plus largement diffusée et présentait la caractéristique supplémentaire de permettre le stockage hors ligne des programmes par le biais de cartes magnétiques. <a href="https://en.wikipedia.org/wiki/Calculator" target="_blank">Find more on wikipedia page...</a></i>
+</p>
+<p>
+    Dans cette série de missions, vous allez construire une calculatrice élémentaire.
+</p>
+<p>
+    En entrée, vous obtenez une séquence de touches pressées et, comme résultat de cette fonction, vous devez montrer ce qui sera affiché à l'écran lorsque la dernière touche sera pressée. Attention, ce n'est pas toujours le résultat de l'expression. En fait, jouer avec la calculatrice physique ou l'application vous aidera vraiment à repérer les cas limites.
+</p>
+<p>
+    Dans la sixième mission sont ajoutées des touches telles que la majuscule "B" (retour arrière) - pour effacer le caractère précédent et la majuscule "C" (nettoyage) - pour effacer tous les résultats, y compris les erreurs.
+</p>
+<p>
+    <strong>Comportement attendu:</strong>
+    <ul>
+        <li><i>les zéros du début doivent être supprimés, le nombre de zéros seulement est converti en zéro unique;</i></li>
+        <li><i>parmi les signes +- entre les nombres, le dernier doit être pris;</i></li>
+        <li><i>"==" signifie que la dernière opération est répétée;</i></li>
+        <li><i>"+=" ou "-=" - ajouter/soustraire le nombre (ou le résultat de l'opération) avant la combinaison (doubler le nombre/soustraire lui-même);</i></li>
+        <li><i>la calculatrice ignore les chiffres que vous entrez après le 5;</i></li>
+        <li><i>"-" pour les nombres &lt; 0 ne prend PAS la place d'un chiffre;</i></li>
+        <li><i>si l'abs(résultat) est supérieur à 99999 - "erreur" est affiché comme résultat;</i></li>
+        <li><i>pour les flottants, si la partie entière de abs(result) est supérieure à 9999 - "error" est affiché comme résultat;</i></li>
+        <li><i>pour les flottants, si la longueur totale du nombre est supérieure à 5 chiffres, elle doit être arrondie à 5 chiffres (1.23456 -&gt; 1.235);</i></li>
+        <li><i>pour les flottants, les zéros de début et de fin doivent être supprimés (jusqu'au "." si possible): 0.1200 -&gt; .12 , 123.00 -&gt; 123. . Elle doit être effectuée après l'arrondi: 1.000123 -&gt; 1. . L'élimination des zéros de fin ne doit être effectuée qu'après la fin de la saisie d'un nombre (appui sur un caractère autre qu'un chiffre);</i></li>
+        <li><i>lorsqu'il n'y a plus de signe après les B et que de nouveaux chiffres sont pressés - concaténer avec le nombre précédent: 12+B3 -&gt; 123 .</i></li>
+    </ul>
+</p>
+<!-- Explain input and output values -->
+<p>
+   <strong>Entrée:</strong> Chaîne.
+</p>
+<p>
+   <strong>Sortie:</strong> Chaîne.
+</p>
+<p>
+    <strong>Exemples:</strong>
+</p>
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+
+    <strong>Comment c'est utilisé:</strong>
+    <i>Les calculatrices sont largement utilisées. Il est intéressant et utile de comprendre les principes de son entrée et de sa sortie.</i>
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Condition préalable:</strong>
+    <i>Caractères autorisés: chiffres (0-9), point (.), signes +, -, =, *, /, //, %, ** et leurs combinaisons (+=, +-, ==, %= etc.), lettres "B" et "C". Le nombre entier ne peut contenir plus de 5 chiffres, float - 4.</i>
+</p>
